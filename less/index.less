@@ -222,7 +222,18 @@ header {
 				padding-top: @paddingsmall;
 			}
 		}
+
+		.education {
+			.school {
+				padding: @paddingsmall 0;
+			}
+			.title {
+				.displayFlex(space-between, flex-start, row);
+				padding-bottom: @paddingsmall;
+		}
 	}
+}
+
 
 	@media (max-width: @mobilebreakpoint){
 		.displayFlex(space-between, center, column);

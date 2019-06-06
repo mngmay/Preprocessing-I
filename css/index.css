@@ -298,6 +298,16 @@ header .intro {
 .middle-content .workhistory .job ul {
   padding-top: 1%;
 }
+.middle-content .workhistory .education .school {
+  padding: 1% 0;
+}
+.middle-content .workhistory .education .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  padding-bottom: 1%;
+}
 @media (max-width: 500px) {
   .middle-content {
     display: flex;
