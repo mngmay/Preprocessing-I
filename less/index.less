@@ -112,6 +112,8 @@ ul {
 	max-width: 880px;
 	font-size: 1.25rem; 
 	margin: 0 auto;
+	border: dashed 2px @themecolor;
+	border-bottom: 0;
 
 	@media (max-width: @mobilebreakpoint){
 		.displayFlex(space-between, center, column);
@@ -121,8 +123,6 @@ ul {
 nav {
 	.displayFlex(space-around, center, row);
 	height: 50px;
-	border: 2px dashed @themecolor;
-	border-bottom:0;
 
 	a {
 		text-decoration: none;
@@ -155,8 +155,6 @@ header {
 	.displayFlex(space-between, center, row);
 	background-color: lighten(@themecolor,20%);
 	padding: @standardpadding;
-	border: 2px dashed @themecolor;
-	border-top: 0;
 	border-bottom: 5px solid black;
 	img {
 		height: 20%;
@@ -187,7 +185,6 @@ header {
 		height: 99%;
 		width: 30%;
 		padding: 0 2%;
-		border-left: dashed 2px @themecolor;
 		
 		li {
 			list-style: none;

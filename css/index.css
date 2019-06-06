@@ -170,6 +170,8 @@ ul li {
   max-width: 880px;
   font-size: 1.25rem;
   margin: 0 auto;
+  border: dashed 2px #A96A67;
+  border-bottom: 0;
 }
 @media (max-width: 500px) {
   .container {
@@ -185,8 +187,6 @@ nav {
   align-items: center;
   flex-direction: row;
   height: 50px;
-  border: 2px dashed #A96A67;
-  border-bottom: 0;
 }
 nav a {
   text-decoration: none;
@@ -223,8 +223,6 @@ header {
   flex-direction: row;
   background-color: #ceaaa8;
   padding: 5%;
-  border: 2px dashed #A96A67;
-  border-top: 0;
   border-bottom: 5px solid black;
 }
 header img {
@@ -259,7 +257,6 @@ header .intro {
   height: 99%;
   width: 30%;
   padding: 0 2%;
-  border-left: dashed 2px #A96A67;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
