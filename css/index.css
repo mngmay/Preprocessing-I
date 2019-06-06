@@ -171,6 +171,14 @@ ul li {
   font-size: 1.25rem;
   margin: 0 auto;
 }
+@media (max-width: 500px) {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+}
 nav {
   display: flex;
   justify-content: space-around;
@@ -195,6 +203,7 @@ nav a:hover {
     align-items: center;
     flex-direction: column;
     height: 100%;
+    width: 100%;
     border: 0;
   }
   nav a {
@@ -306,17 +315,26 @@ header .intro {
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: row;
+    border: 1px solid blue;
+    width: 100%;
   }
   .middle-content .middle-left-content .contact {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    width: 100%;
+  }
+  .middle-content .middle-left-content .contact p {
+    padding: 1%;
   }
   .middle-content .workhistory {
     padding: 5%;
     width: 100%;
     border: none;
+  }
+  .middle-content .workhistory li {
+    padding: 2%;
   }
 }
 footer {

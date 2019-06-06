@@ -112,6 +112,10 @@ ul {
 	max-width: 880px;
 	font-size: 1.25rem; 
 	margin: 0 auto;
+
+	@media (max-width: @mobilebreakpoint){
+		.displayFlex(space-between, center, column);
+	}
 }
 
 nav {
@@ -133,6 +137,7 @@ nav {
 	@media(max-width: @mobilebreakpoint){
 		.displayFlex(space-around, center, column);
 		height: 100%;
+		width: 100%;
 		a {
 			border-bottom: 1px solid @themecolor;
 			padding: @paddingsmall;
@@ -227,10 +232,16 @@ header {
 			padding: @standardpadding;
 			.skillsbox {
 				.displayFlex(space-between, flex-start, row);
+				.testborder();
+				width: 100%;
 			}
 
 			.contact {
-			.displayFlex(space-between, center, column);
+				.displayFlex(space-around, center, column);
+				width: 100%;
+				p {
+					padding: @paddingsmall;
+				}
 			}
 		}
 
@@ -238,6 +249,9 @@ header {
 			padding: @standardpadding;
 			width: 100%;
 			border: none;
+			li {
+				padding: 2%;
+			}
 		}
 	}
 }
