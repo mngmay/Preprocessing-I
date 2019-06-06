@@ -72,6 +72,10 @@ table {
 	border: 1px solid blue;
 }
 
+.themeborder {
+	border: dashed 2px @themecolor;
+}
+
 
 
 html, body {
@@ -100,7 +104,7 @@ h3{
 ul {
 	list-style: square inside none;
 	li {
-	padding: 3px;
+	padding-bottom: 3px;
 	}
 }
 
@@ -108,7 +112,6 @@ ul {
 	max-width: 880px;
 	font-size: 1.25rem; 
 	margin: 0 auto;
-
 }
 
 nav {
@@ -127,6 +130,20 @@ nav {
 		font-weight: 800;
 	}
 
+	@media(max-width: @mobilebreakpoint){
+		.displayFlex(space-around, center, column);
+		height: 100%;
+		a {
+			border-bottom: 1px solid @themecolor;
+			padding: @paddingsmall;
+			width: 100%;
+			text-align: center;
+		}
+		a:first-child{
+			border-top: 1px solid @themecolor;
+		}
+		border: 0;
+	}
 }
 
 header {
@@ -147,30 +164,48 @@ header {
 	}
 
 	@media(max-width: @mobilebreakpoint){
-
+		.displayFlex(center, space-around, column);
+		text-align: center;
+		img {
+			display: none;
+		}
 	}
 }
 
 
 .middle-content {
 	.displayFlex(space-around, center, row);
-	padding: @paddingsmall;
-	height: 600px;
+	padding: @paddingsmall 0;
+	height: 70vh;
+
 	.middle-left-content{
 		height: 99%;
 		width: 30%;
+		padding: 0 2%;
+		border-left: dashed 2px @themecolor;
+		
+		li {
+			list-style: none;
+			padding: 5px 0;
+		}
 		.displayFlex(flex-start, flex-start, column);
 		.skillsbox {
 			padding: @standardpadding @standardpadding @standardpadding 0;
 		}
 		.contact {
 			padding: @standardpadding @standardpadding @standardpadding 0;
+			p {
+				padding: @standardpadding 0;
+			}
+
 		}
 	}
 
 	.workhistory {
 		height: 99%;
 		width: 70%;
+		padding: 0 @standardpadding;
+		border-left: dashed 2px @themecolor;
 		.job {
 			padding: @paddingsmall;
 			padding-bottom: @standardpadding;
@@ -178,6 +213,31 @@ header {
 				.displayFlex(space-between, flex-start, row);
 				padding-bottom: @paddingsmall;
 			}
+			ul {
+				padding-top: @paddingsmall;
+			}
+		}
+	}
+
+	@media (max-width: @mobilebreakpoint){
+		.displayFlex(space-between, flex-start, column);
+		.middle-left-content {
+			width: 100%;
+			border: none;
+			padding: @standardpadding;
+			.skillsbox {
+				.displayFlex(space-between, flex-start, row);
+			}
+
+			.contact {
+			.displayFlex(space-between, center, column);
+			}
+		}
+
+		.workhistory {
+			padding: @standardpadding;
+			width: 100%;
+			border: none;
 		}
 	}
 }

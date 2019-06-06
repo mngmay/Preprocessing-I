@@ -133,6 +133,9 @@ table {
 .testborder {
   border: 1px solid blue;
 }
+.themeborder {
+  border: dashed 2px #A96A67;
+}
 html,
 body {
   height: 100%;
@@ -161,7 +164,7 @@ ul {
   list-style: square inside none;
 }
 ul li {
-  padding: 3px;
+  padding-bottom: 3px;
 }
 .container {
   max-width: 880px;
@@ -185,6 +188,25 @@ nav a {
 nav a:hover {
   font-weight: 800;
 }
+@media (max-width: 500px) {
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    border: 0;
+  }
+  nav a {
+    border-bottom: 1px solid #A96A67;
+    padding: 1%;
+    width: 100%;
+    text-align: center;
+  }
+  nav a:first-child {
+    border-top: 1px solid #A96A67;
+  }
+}
 header {
   display: flex;
   justify-content: space-between;
@@ -204,21 +226,39 @@ header img {
 header .intro {
   width: 75%;
 }
+@media (max-width: 500px) {
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: space-around;
+    flex-direction: column;
+    text-align: center;
+  }
+  header img {
+    display: none;
+  }
+}
 .middle-content {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
-  padding: 1%;
-  height: 600px;
+  padding: 1% 0;
+  height: 70vh;
 }
 .middle-content .middle-left-content {
   height: 99%;
   width: 30%;
+  padding: 0 2%;
+  border-left: dashed 2px #A96A67;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
+}
+.middle-content .middle-left-content li {
+  list-style: none;
+  padding: 5px 0;
 }
 .middle-content .middle-left-content .skillsbox {
   padding: 5% 5% 5% 0;
@@ -226,9 +266,14 @@ header .intro {
 .middle-content .middle-left-content .contact {
   padding: 5% 5% 5% 0;
 }
+.middle-content .middle-left-content .contact p {
+  padding: 5% 0;
+}
 .middle-content .workhistory {
   height: 99%;
   width: 70%;
+  padding: 0 5%;
+  border-left: dashed 2px #A96A67;
 }
 .middle-content .workhistory .job {
   padding: 1%;
@@ -240,6 +285,39 @@ header .intro {
   align-items: flex-start;
   flex-direction: row;
   padding-bottom: 1%;
+}
+.middle-content .workhistory .job ul {
+  padding-top: 1%;
+}
+@media (max-width: 500px) {
+  .middle-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .middle-content .middle-left-content {
+    width: 100%;
+    border: none;
+    padding: 5%;
+  }
+  .middle-content .middle-left-content .skillsbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+  .middle-content .middle-left-content .contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  .middle-content .workhistory {
+    padding: 5%;
+    width: 100%;
+    border: none;
+  }
 }
 footer {
   padding: 5%;
