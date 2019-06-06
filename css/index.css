@@ -302,7 +302,7 @@ header .intro {
   .middle-content {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
   }
   .middle-content .middle-left-content {
@@ -313,10 +313,9 @@ header .intro {
   .middle-content .middle-left-content .skillsbox {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: space-between;
     flex-direction: row;
-    border: 1px solid blue;
-    width: 100%;
+    width: 370px;
   }
   .middle-content .middle-left-content .contact {
     display: flex;
@@ -324,9 +323,10 @@ header .intro {
     align-items: center;
     flex-direction: column;
     width: 100%;
+    background: #f3eae9;
   }
   .middle-content .middle-left-content .contact p {
-    padding: 1%;
+    padding: 1% 0;
   }
   .middle-content .workhistory {
     padding: 5%;
