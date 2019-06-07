@@ -180,7 +180,6 @@ ul li {
     align-items: center;
     flex-direction: column;
     border: none;
-    border: 1px solid blue;
   }
 }
 nav {
@@ -253,7 +252,7 @@ header .intro {
   align-items: center;
   flex-direction: row;
   padding: 1% 0;
-  height: 70vh;
+  height: 100%;
 }
 .middle-content .middle-left-content {
   height: 99%;
