@@ -179,6 +179,8 @@ ul li {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    border: none;
+    border: 1px solid blue;
   }
 }
 nav {
